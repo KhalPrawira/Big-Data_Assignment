@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  warehouse:
+    image: postgres:15
+    container_name: bigdata_warehouse
+    environment:
+      POSTGRES_USER: admin_k
+      POSTGRES_PASSWORD: "My name is not Billy nor Alex"
+      POSTGRES_DB: ecommerce_dw
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: bigdata_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@bigdata.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - warehouse
