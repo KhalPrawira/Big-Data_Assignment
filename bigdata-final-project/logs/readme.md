@@ -1,4 +1,4 @@
-Folder ini menyimpan log proses extract pada pipeline ELT.
+Folder ini menyimpan log proses extract pada pipeline ETL dan ELT.
 Log mencatat:
 - sumber data
 - waktu eksekusi
