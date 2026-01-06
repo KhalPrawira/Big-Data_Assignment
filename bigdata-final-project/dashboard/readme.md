@@ -2,4 +2,4 @@ link demo dashboard: https://drive.google.com/file/d/1_Q5VARUZLig6iDS3L6bvS_T8VT
 
 Ketika mengakses link perlu mengirim request access terlebih dahulu. Jika sudah, akan kami acc baru bisa masuk ke dalam dashboard.
 
-Tahap diperlukan karena Power BI yang digunakan belum yang versi "Updgrade", sehingga tidak bisa mengakses fitur "Share" yang bisa mengatur hak aksesnya.
+Tahap ini diperlukan karena Power BI yang digunakan belum yang versi "Updgrade", sehingga tidak bisa mengakses fitur "Share" yang bisa mengatur hak aksesnya.
