@@ -20,7 +20,7 @@ def log_extract(source_name, rows, cols, file_path, start_time):
 def extract_elt_source1():
     start_time = time.time()
 
-    url = "https://github.com/KhalPrawira/Big-Data_Assignment/raw/refs/heads/main/UAS/Dataset/Pakistans%20Largest%20E-Commerce%20Dataset.csv"
+    url = "https://github.com/KhalPrawira/Big-Data_Assignment/raw/refs/heads/main/bigdata-final-project/datalake/source1/Pakistans%20Largest%20E-Commerce%20Dataset.csv"
     df = pd.read_csv(url)
 
     os.makedirs("raw/source1", exist_ok=True)
@@ -39,7 +39,7 @@ def extract_elt_source1():
 def extract_elt_source2():
     start_time = time.time()
 
-    url = "https://github.com/KhalPrawira/Big-Data_Assignment/raw/refs/heads/main/UAS/Dataset/pakistan_holiday.csv"
+    url = "https://github.com/KhalPrawira/Big-Data_Assignment/raw/refs/heads/main/bigdata-final-project/datalake/source2/pakistan_holiday.csv"
     df = pd.read_csv(url)
 
     os.makedirs("raw/source2", exist_ok=True)
