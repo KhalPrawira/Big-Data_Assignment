@@ -20,26 +20,41 @@ Pendekatan **ETL dan ELT** digunakan secara bersamaan untuk menunjukkan pemahama
 ```
 UAS/
 │
+├─ architecture/
+│  ├─ architecture_diagram_elt.png
+│  └─ architecture_diagram_etl.png
+│
+├─ dashboard/
+│  ├─ dashboard_link.txt
+│  └─ readme.md
+│
 ├─ datalake/
 │   ├─ source1/
+│   |  └─ Pakistans Largest E-Commerce Dataset.csv 
 │   └─ source2/
-│
-├─ raw/
-│   ├─ source1/
-│   │   └─ ecommerce_raw.csv
-│   └─ source2/
-│       └─ holiday_raw.csv
+│      └─ pakistan_holiday.csv
 │
 ├─ elt_pipeline/
 │   ├─ load_raw.sql
 │   ├─ transform_elt.sql
 │   └─ aggregation.sql
 │
+├─ etl_pipeline/
+│  ├─ duplicate_data.ipynb
+│  └─ etl_pipeline.ipynb
+│
 ├─ logs/
-│   └─ elt_pipeline/
-│       ├─ extract_elt.py
-│       ├─ elt_extract.log
-│       └─ README.md
+│   ├─ elt_pipeline/
+│   │  └─ extract_elt.py
+│`  ├─ etl_extract.log
+│   ├─ elt_extract.log
+│   └─ README.md
+│
+├─ raw/
+│   ├─ source1/
+│   │   └─ ecommerce_raw.csv
+│   └─ source2/
+│       └─ holiday_raw.csv
 │
 ├─ visualization/
 │   └─ visualisasi.ipynb
@@ -48,7 +63,7 @@ UAS/
 │   ├─ README.md
 │   └─ schema_structure.sql
 │
-└─ README.md
+└─ readme.md
 ```
 
 Struktur direktori ini dirancang untuk memisahkan data mentah, proses ETL/ELT, logging, data warehouse, dan visualisasi sesuai praktik rekayasa data.
@@ -155,17 +170,6 @@ Agregasi analitik mencakup:
 
 ---
 
-## Visualisasi Data
-
-Visualisasi dilakukan menggunakan **Python (Jupyter Notebook)**:
-- Data diambil langsung dari tabel agregasi pada schema `mart`
-- Tidak ada transformasi data di Python
-- Visualisasi digunakan untuk analisis dan interpretasi hasil
-
-Notebook visualisasi tersedia pada folder `visualization/`.
-
----
-
 ## Logging
 
 Proses extract dicatat pada:
@@ -180,15 +184,5 @@ Log berisi informasi:
 - Waktu eksekusi extract
 
 ---
-
-## Kesimpulan
-
-Repositori ini telah memenuhi seluruh ketentuan tugas besar UAS Big Data, termasuk:
-- Implementasi ETL dan ELT
-- Penggunaan multi-source data
-- Transformasi dilakukan di data warehouse (ELT)
-- Logging proses extract
-- Feature engineering dan agregasi
-- Visualisasi berbasis hasil ELT
 
 Pendekatan ELT dipilih sebagai metode utama karena lebih fleksibel dalam menangani data dengan format dan kualitas yang beragam, sementara ETL digunakan sebagai pembanding konsep.
